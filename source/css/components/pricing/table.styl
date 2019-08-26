@@ -1,0 +1,64 @@
+.pricing-table
+    border-collapse: collapse
+    margin: 0 auto
+    .empty
+        border-width: 0
+        width: 250px
+        background: transparent
+    thead, tfoot
+        td
+            border: 1px solid #dddddd
+            background: #fff
+            width: 160px
+    .head-cell
+        display flex
+        flex-direction: column
+        padding: 20px
+        align-items: center
+        > *:not(:last-child)
+            margin-bottom: 14px
+        img
+            max-height: 50px
+        h3
+            font-size: 18px
+            color: $color.secondary
+        .price
+            font-size: 22px
+            color: $color.secondary
+            font-weight: bold
+            display: flex
+            align-items: flex-end
+            i
+                font-style: normal
+                font-size: 16px
+                color: $color.text
+                font-weight: normal
+                margin: 0 3px 1px 0
+        .mensal-plan
+            display none
+        .type
+            font-size: 13px
+        .link
+            text-transform: uppercase
+            font-weight: bold
+            letter-spacing: .4px
+            color: $color.secondary
+            font-size: 14px
+            &:hover
+                text-decoration: underline
+    tbody
+        td
+            padding: 10px
+            border: 1px solid #dddddd
+            text-align: center
+            background: #fff
+        .label-box
+            width: 250px
+            display flex
+            justify-content: space-between
+    .fa-check
+        color: $color.success
+        font-size: 20px
+    .fa-times
+        color: $color.gray-medium
+        font-size: 20px

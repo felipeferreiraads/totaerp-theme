@@ -1,0 +1,78 @@
+.box-form
+    width: 1100px
+    max-width 100%
+    margin: 0 auto
+    background: #fff
+    box-shadow: 0 2px 10px 0 rgba(87, 87, 87, 0.5)
+    padding: 40px 30px
+    +below($bp.lg)
+        padding: 30px 15px
+    form
+        display flex
+        flex-wrap: wrap
+        justify-content: space-between
+        +above($bp.lg)
+            > *:nth-child(n+5)
+                margin-top: 30px
+        +below($bp.lg)
+            > *:nth-child(n+2)
+                margin-top: 20px
+        p
+            display: none
+    .field
+        +above($bp.lg)
+            &:not(.full)
+                width: 48%
+            &.full
+                width: 100%
+        +below($bp.lg)
+            width: 100%
+        > label
+            display: block
+            font-size: 16px
+            color: $color.secondary
+            letter-spacing: 1px
+            text-transform: uppercase
+            margin-bottom: 15px
+            font-weight: bold
+        textarea, select, input:not([type=radio])
+            width: 100%
+            height: 50px
+            background: #e6e6e6
+            padding: 0 20px
+            border: none
+            border-radius: 5px
+            box-shadow: 0 1px 10px 0 rgba(190, 190, 190, 0.5)
+            +below($bp.lg)
+                height: 40px
+        textarea
+            height: 100px
+            resize: none
+        select
+            appearance none
+            -moz-appearance none
+        .select
+            position: relative
+            &::after
+                content: ''
+                width: 0
+                height: 0
+                border-style: solid
+                border-width: 5px 5px 0 5px
+                border-color: #989898 transparent transparent transparent
+                position: absolute
+                top: 50%
+                right: 20px
+                transform: translateY(-50%)
+        .radio-group
+            display flex
+            > *:not(:last-child)
+                margin-right: 20px
+            label
+                display flex
+                align-items: center
+                input
+                    margin-right: 5px
+    .ui-button
+        margin: 50px auto 0
+        width: 300px

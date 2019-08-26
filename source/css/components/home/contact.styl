@@ -1,0 +1,33 @@
+.contact
+    padding: 60px 0 240px
+    background: $gradient-dark
+    +below($bp.lg)
+        padding: 50px 0 160px
+    .grid
+        display flex
+        justify-content: space-between
+        +below($bp.lg)
+            flex-direction: column
+    h2
+        margin-bottom: 60px
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5)
+    .item
+        display flex
+        &:not(:last-child)
+            margin-bottom: 25px
+        .icon
+            font-size: 25px
+            color: white
+            margin-right: 25px
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5)
+        .text
+            font-size: 18px
+            color white
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5)
+        &:last-child
+            .icon
+                margin-top: 5px
+        form
+        +below($bp.lg)
+            margin-top: 50px
+            padding: 50px 20px

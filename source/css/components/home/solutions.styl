@@ -1,0 +1,115 @@
+.solutions
+    padding: 130px 0 90px
+    &.internal
+        padding: 100px 0
+    +below($bp.lg)
+        padding: 50px 0
+    h2
+        margin-bottom: 30px
+    .container > p
+        font-size: 20px
+        margin-bottom: 60px
+        +below($bp.lg)
+            font-size: 18px
+    .grid
+        display flex
+        justify-content: space-between
+        +below($bp.lg)
+            flex-wrap: wrap
+            justify-content: space-between
+        > *
+            +above($bp.lg)
+                flex: 1
+                &:not(:last-child)
+                    margin-right: 5%
+            +between($bp.sm, $bp.lg)
+                flex-basis: 47%
+                &:nth-child(n+3)
+                    margin-top: 50px
+            +below($bp.sm)
+                flex-basis: 100%
+                &:nth-child(n+2)
+                    margin-top: 50px
+
+.card-solution
+    border-radius: 4px
+    background: white
+    box-shadow: 0 2px 7px 0 rgba(57, 57, 57, 0.5)
+    border-bottom: 5px solid $color.title
+    transition: transform .3s
+    position relative
+    display flex
+    flex-direction: column
+    &:hover
+        transform: scale(1.1)
+        box-shadow: 0 2px 15px 0 rgba(57, 57, 57, 0.5)
+        h3
+            &::after
+                width: 100%
+    figure
+        width: 100%
+        height: 100px
+        padding: 20px 10px 0
+        img
+            width: 100%
+            height 100%
+            object-fit: contain
+            object-position: center
+    .info
+        padding: 20px 15px 15px
+        flex: 1
+        display flex
+        flex-direction: column
+        &:not(.no-space)
+            justify-content: space-between
+        h3
+            margin-bottom: 15px
+            align-self: flex-start
+            &::after
+                transition width .3s ease-in-out
+        p
+            color: #5a5a5a
+        ul
+            list-style-type: none
+            padding: 0
+            li
+                display flex
+                align-items: center
+                font-weight: 500
+                letter-spacing: .3px
+                .icon
+                    color: $color.primary
+                    font-size: 20px
+                    margin: 2px 3px 0 0
+        .price-link
+            display flex
+            justify-content: space-between
+            align-items: center
+            margin-top: auto
+            .ui-button
+                margin-left: auto
+            .blue
+                margin-bottom: 8px
+        .price
+            display flex
+            flex-direction: column
+            .top, .bottom
+                font-size: 9px
+            .value
+                color: $color.primary
+                font-size: 20px
+                font-weight: bold
+    .is-popular
+        display inline-block
+        font-size: 12px
+        color: white
+        letter-spacing: .3px
+        text-transform: uppercase
+        line-height: 28px
+        border-radius: 4px 4px 0 0
+        position absolute
+        bottom: 100%
+        right 0
+        background: $color.button
+        font-weight: bold
+        padding: 0 5px

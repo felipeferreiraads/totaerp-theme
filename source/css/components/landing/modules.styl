@@ -1,0 +1,152 @@
+.modules
+    padding: 90px 0 0
+    +below($bp.lg)
+        padding: 50px 0
+    .container
+        margin-bottom: 100px
+    .grid
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-right: calc((100% - 1240px) / 2)
+    .carousel
+        width: calc(100% - 470px)
+        position relative
+        +below($bp.lg)
+            display: none
+    .carousel-info
+        position: relative
+        +below($bp.lg)
+            width: 85%
+            margin: 0 auto
+            display flex
+            justify-content: center
+    button
+        padding: 0
+        margin: 0
+        border: none
+        background: transparent
+        font-size: 45px
+        color: $color.secondary
+        position: absolute
+        outline: none
+        cursor pointer
+        transform: translateY(-50%)
+        top: 50%
+    .prev-modules
+        left: 15px
+        z-index: 2
+        +above(1390px)
+            left: 2px
+    .next-modules
+        right: -15px
+    .prev-modules-info
+        left: -20px
+        font-size: 35px
+        +above($bp.lg)
+            display none
+    .next-modules-info
+        right: -20px
+        font-size: 35px
+        +above($bp.lg)
+            display none
+
+.carousel-modules-cards
+    width: 100%
+    position relative
+    .owl-stage-outer
+        padding: 20px 20px 20px 0
+    &::before
+        content: ''
+        width: 20%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1
+        background: linear-gradient(to right, #f5f6f8, rgba(245,246,248,0))
+
+.carousel-modules-info
+    width: 450px
+    max-width: 100%
+    display: flex !important
+    justify-content: center
+    .owl-stage-outer
+        +above($bp.sm)
+            padding: 20px
+    > *:not(:first-child)
+        display: none
+
+.card-module
+    width 180px
+    height 250px
+    border-radius: 5px
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5)
+    background: #fff
+    border-bottom: 5px solid $color.secondary
+    padding: 10px
+    display flex
+    flex-direction: column
+    cursor pointer
+    transition: transform .3s
+    &:hover
+        transform: scale(1.05)
+        box-shadow: 0 2px 15px 0 rgba(57, 57, 57, 0.5)
+    h3
+        font-size: 18px
+        color: $color.secondary
+        margin-bottom: 30px
+        text-align: left
+    p
+        font-size: 15px
+        text-align: left
+    .bottom
+        margin-top: auto
+        display flex
+        justify-content: space-between
+        align-items: center
+        flex-direction: row-reverse
+        .text
+            font-size: 14px
+            text-transform: uppercase
+            font-weight: bold
+            color: $color.secondary
+            letter-spacing: .4px
+        img
+            width: 30px
+
+.card-module-info
+    width: 400px
+    max-width: 100%
+    height: 400px
+    box-shadow: 0 2px 20px 0 rgba(74, 74, 74, 0.5)
+    border-radius: 5px
+    background: #fff
+    padding: 20px
+    display: flex
+    flex-direction: column
+    .top
+        display flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 40px
+        h3
+            font-size: 20px
+            color: $color.secondary
+        img
+            width: auto
+            height: 40px
+    ul
+        padding: 0 0 0 20px
+        font-weight: bold
+        color: $color.secondary
+        li
+            &:not(:last-child)
+                margin-bottom: 10px
+    .bottom
+        flex: 1
+        display: flex
+        flex-direction: column
+    .ui-button
+        margin-top: auto
+        align-self: flex-end

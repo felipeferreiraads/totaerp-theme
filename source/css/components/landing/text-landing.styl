@@ -1,0 +1,25 @@
+.text-landing
+    padding: 100px 0
+    +below($bp.lg)
+        padding: 50px 0
+    .grid
+        +above($bp.lg)
+            width: 50%
+    h2
+        margin-bottom: 50px
+    p
+        font-size: 18px
+        line-height: 1.5
+        &:not(:last-child)
+            margin-bottom: 20px
+
+.form-price
+    display flex
+    flex-direction: column
+    span
+        font-size: 22px
+        margin-bottom: 20px
+        strong
+            color: $color.secondary
+    .ui-button
+        align-self: flex-start

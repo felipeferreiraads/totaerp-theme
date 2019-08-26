@@ -1,0 +1,17 @@
+.grid-modules
+    display flex
+    flex-wrap: wrap
+    &:not(:last-child)
+        margin-bottom: 100px
+        +below($bp.lg)
+            margin-bottom: 50px
+    +above($bp.xs)
+        > *:not(:last-child)
+            margin-right: 4%
+            margin-bottom: 50px
+    +below($bp.sm)
+        justify-content: space-between
+        > *
+            max-width 48%
+            &:nth-child(n+3)
+                margin-top: 30px

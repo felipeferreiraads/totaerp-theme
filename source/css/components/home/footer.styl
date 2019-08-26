@@ -1,0 +1,35 @@
+footer
+    width: 100%
+    height: 110px
+    position absolute
+    bottom: 0
+    left: 0
+    +below($bp.lg)
+        height 80px
+    .container
+        height 100%
+    .grid
+        height 100%
+        display flex
+        justify-content: space-between
+        align-items: center
+        border-top: 1px solid white
+    .social
+        display flex
+        a
+            font-size: 28px
+            color: white
+            +below($bp.lg)
+                font-size: 20px
+            &:not(:last-child)
+                margin-right: 20px
+        .icon-twitter
+            font-size: 33px
+            +below($bp.lg)
+                font-size: 20px
+        .icon-youtube
+            font-size: 32px
+            +below($bp.lg)
+                font-size: 19px
+    img
+        max-height: 80%

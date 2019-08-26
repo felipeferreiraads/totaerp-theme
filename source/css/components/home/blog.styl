@@ -1,0 +1,88 @@
+.blog-home
+    padding: 130px 0px 210px
+    +below($bp.lg)
+        padding: 50px 0
+    h2
+        margin-bottom: 30px
+    .container > p
+        font-size: 20px
+        margin-bottom: 75px
+        +below($bp.lg)
+            font-size: 18px
+    .grid
+        display flex
+        +below($bp.lg)
+            flex-wrap: wrap
+            justify-content: space-between
+        > *
+            +above($bp.lg)
+                flex: 1
+                max-width: 30%
+                &:not(:last-child)
+                    margin-right: 6%
+            +between($bp.sm, $bp.lg)
+                &:first-child
+                    flex-basis: 100%
+                    margin-bottom: 50px
+                &:not(:first-child)
+                    flex-basis: 47%
+            +below($bp.lg)
+                flex-basis: 100%
+                &:nth-child(n+2)
+                    margin-top: 50px
+    .ui-button
+        +above($bp.lg)
+            margin-top: 80px
+            float right
+        +below($bp.lg)
+            max-width: 200px
+            display block
+            margin: 50px auto 0
+
+.card-blog
+    height: 300px
+    border-radius: 5px
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.5)
+    overflow hidden
+    position relative
+    &:hover
+        .info
+            height: 110px
+    figure
+        width: 100%
+        height 100%
+        position absolute
+        top 0
+        left 0
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center
+    .info
+        width 100%
+        padding: 10px 20px
+        height: 96px
+        position absolute
+        bottom: 0
+        left: 0
+        background-image: linear-gradient(to bottom, rgba(102,105,130, 0.8), rgba(26,41,63,0.8))
+        transition: height ease-in-out .3s
+        h3
+            font-size: 18px
+            color: white
+            margin-bottom: 10px
+        .link
+            display flex
+            align-items: center
+            color: white
+            font-weight: bold
+            text-transform: uppercase
+            letter-spacing: .4px
+            font-size: 14px
+            position absolute
+            bottom: 10px
+            right: 20px
+            .icon
+                font-size: 20px
+                margin-top: 4px

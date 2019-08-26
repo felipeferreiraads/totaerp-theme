@@ -1,0 +1,23 @@
+.ui-title
+    font-size: 28px
+    color: $color.title
+    padding-bottom: 12px
+    position relative
+    +below($bp.lg)
+        font-size: 22px
+    &::after
+        content: ''
+        width: 20px
+        height: 2px
+        background: $color.title
+        position: absolute
+        bottom: 0
+        left: 0
+        transition: width ease-in-out .2s
+    &.small
+        font-size: 20px
+        padding-bottom: 8px
+    &.white
+        color white
+        &::after
+            background: white

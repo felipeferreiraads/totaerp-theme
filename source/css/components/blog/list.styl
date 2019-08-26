@@ -1,0 +1,75 @@
+.grid-blog
+    display flex
+    justify-content: space-between
+    +below($bp.lg)
+        flex-direction: column
+    .posts, .text-internal
+        +above($bp.lg)
+            flex-basis: 65%
+        +below($bp.lg)
+            flex: 1
+    .sidebar
+        +above($bp.lg)
+            flex-basis: 25%
+        +below($bp.lg)
+            flex: 1
+    .text-internal
+        &.case
+            margin: 0 auto
+        p
+            font-size: 18px
+            line-height: 1.5
+        > *
+            &:not(:last-child)
+                margin-bottom: 20px
+        a
+            color: $color.secondary
+            text-decoration: underline
+        img
+            max-width 100%
+            height: auto
+            display: block
+        .aligncenter
+            margin: 0 auto
+        .alignright
+            margin: 0 auto
+            float: right
+
+.grid-posts
+    display flex
+    flex-wrap: wrap
+    justify-content: space-between
+    +below($bp.lg)
+        margin-bottom: 50px
+    > *
+        +above($bp.sm)
+            flex-basis: 45%
+            &:nth-child(n+3)
+                margin-top: 50px
+        +below($bp.sm)
+            flex-basis: 100%
+            &:nth-child(n+2)
+                margin-top: 50px
+
+.breadcrumbs
+    display flex
+    align-items: center
+    margin-bottom: 50px
+    &.case
+        max-width: 65%
+        margin: 0 auto 50px
+    > *
+        color: $color.breadcrumbs
+        line-height: 1
+        &:not(:last-child)
+            margin-right: 10px
+        &:last-child
+            color: #646363
+            font-weight: 500
+    span
+        color: #646363
+        font-size: 12px
+        margin-top: 4px
+    a
+        &:hover
+            text-decoration: underline

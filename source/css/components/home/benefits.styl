@@ -1,0 +1,73 @@
+.benefits
+    padding: 130px 0
+    +below($bp.lg)
+        padding: 50px 0
+    .grid
+        display flex
+        +below($bp.lg)
+            flex-direction: column-reverse
+            padding: 0 20px
+    .video
+        +above($bp.lg)
+            width: 50%
+            padding: 0 70px 0 40px
+            margin-top: 8px
+    .player
+        width: 100%
+        max-width: 570px
+        border-radius: 10px
+        background: #d4d4d4
+        overflow hidden
+        box-shadow: 0 2px 10px 0 rgba(87, 87, 87, 0.5)
+        +above($bp.lg)
+            float: right
+        +below($bp.lg)
+            margin: 50px auto 0
+        video
+            width: 100%
+    .text
+        flex: 1
+    h2
+        margin-bottom: 50px
+        +below($bp.lg)
+            margin-bottom: 30px
+    ul
+        list-style-type: none
+        padding: 0
+        li
+            display flex
+            align-items: center
+            visibility hidden
+            &:not(:last-child)
+                margin-bottom: 20px
+            .icon
+                color: $color.primary
+                font-size: 30px
+                margin-right: 13px
+                +below($bp.lg)
+                    font-size: 25px
+            .text
+                font-size: 20px
+                font-weight: 500
+                +below($bp.lg)
+                    font-size: 18px
+            &:nth-child(1)
+                animation-delay: 300ms
+            &:nth-child(2)
+                animation-delay: 450ms
+            &:nth-child(3)
+                animation-delay: 600ms
+            &:nth-child(4)
+                animation-delay: 750ms
+            &:nth-child(5)
+                animation-delay: 900ms
+            &:nth-child(6)
+                animation-delay: 1050ms
+            &:nth-child(7)
+                animation-delay: 1200ms
+            &:nth-child(8)
+                animation-delay: 1350ms
+            &:nth-child(9)
+                animation-delay: 1500ms
+            &:nth-child(10)
+                animation-delay: 1650ms

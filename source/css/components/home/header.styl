@@ -1,0 +1,101 @@
+header
+    width 100%
+    position: fixed
+    top 0
+    left: 0
+    height: 100px
+    z-index: 9999
+    display flex
+    align-items: center
+    transition: .2s
+    &.scrolled
+        .menu
+            > a, .submenu
+                color: $color.secondary
+            > a
+                &::after
+                    background: $color.secondary !important
+    .container
+        width: 1320px
+        max-width 100%
+        padding: 0 40px
+        +below($bp.lg)
+            padding: 0 20px
+    .grid
+        display flex
+        justify-content: flex-end
+        align-items: center
+    .logo
+        margin-right: auto
+        img
+            width: 144px
+            height 35px
+    .menu
+        display flex
+        +below($bp.lg)
+            display none
+        > a, .submenu
+            font-size: 16px
+            color: white
+            text-transform: uppercase
+            font-weight: bold
+            letter-spacing: 0.4px
+            padding: 10px 0
+            position relative
+            cursor pointer
+            &:not(.submenu)
+                &::after
+                    content ''
+                    width: 0
+                    height: 2px
+                    background: white
+                    margin-top: 10px
+                    transition: width ease-in-out .2s
+                    position: absolute
+                    bottom: 0
+                    left: 0
+            &:hover
+                &::after
+                    width: 100%
+            &:not(:last-child)
+                margin-right: 50px
+    .ui-button
+        margin-left: 7%
+        +below($bp.lg)
+            display none
+    .open-menu
+        font-size: 25px
+        color: white
+        padding: 0
+        margin: 0
+        border: none
+        background: transparent
+        +above($bp.lg)
+            display: none
+    .submenu
+        position relative
+        nav
+            position absolute
+            top: 100%
+            left 0
+            background: #fff
+            box-shadow: 0 0 3px rgba(0,0,0,.4)
+            display none
+            a
+                white-space: nowrap
+                color: $color.secondary
+                padding: 10px 15px
+                display: block
+                margin: 0 !important
+                transition: .2s
+                text-transform: uppercase
+                font-weight: bold
+                letter-spacing: 0.4px
+                &:not(:last-child)
+                    margin-bottom: 5px
+                &:hover
+                    background: $color.secondary
+                    color: #fff
+        &:hover
+            nav
+                display block
