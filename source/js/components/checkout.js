@@ -40,8 +40,9 @@ $('.checkout-form').on('submit', e => {
                 request.setRequestHeader('Authorization', `Bearer ${sessionStorage.getItem('token')}`)
             }
         }).done(json => {
-            console.log(json)
+            $('.checkout-message').html('Você já está cadastrado para utilizar os serviços da TotalERP. Entre em contato conosco.').show()
         }).fail(() => {
+            $('.checkout-message').hide()
             $('.cnpj').val(cnpj)
             $('.step-one').css('display', 'none')
             $('.step-two').css('display', 'flex')
@@ -50,17 +51,42 @@ $('.checkout-form').on('submit', e => {
 
     function stepTwo() {
         $.ajax({
+            type: 'POST',
             url: 'http://api.totalerp.com.br/contrato/provisionar',
+            data: $(e.currentTarget).serialize(),
             beforeSend: request => {
                 request.setRequestHeader('Content-Type', 'application/json')
                 request.setRequestHeader('Authorization', `Bearer ${sessionStorage.getItem('token')}`)
             }
-        }).done(json => {
-            console.log(json)
+        }).done(data => {
+            $('.checkout-message').html('Cadastrado com sucesso! Você receberá em seu e-mail as informações para os próximos passos.').show()
         }).fail(() => {
-            $('.cnpj').val(cnpj)
-            $('.step-one').css('display', 'none')
-            $('.step-two').css('display', 'flex')
+            $('.checkout-message').html('Falha ao enviar. Tente novamente.').show()
         })
     }
 })
+
+$('#estado').on('change', e  => {
+    const uf = e.currentTarget.value
+    $.ajax({
+        url: `http://api.totalerp.com.br/municipio/${uf}`,
+        beforeSend: request => {
+            request.setRequestHeader('Content-Type', 'application/json')
+            request.setRequestHeader('Authorization', `Bearer ${sessionStorage.getItem('token')}`)
+        }
+    }).done(json => {
+        var cities = []
+        json.map(item => {
+            cities.push('<option value="'+ item.ibge + '">' + jsUcfirst(item.nome.toLowerCase()) + '</option>')
+        })
+        $('#cidade').html(cities.join())
+    })
+})
+
+setInterval(() => {
+    sessionStorage.removeItem('token')
+}, 300000)
+
+function jsUcfirst(string)  {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}

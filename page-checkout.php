@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(); the_post(); ?>
 
     <section class="banner-internal">
         <div class="container">
@@ -21,7 +21,7 @@
                     </div>
                 </form>
                 <form class="checkout-form step-two">
-                    <input type="hidden" name="produtos" value="<?php echo get_query_var('produto'); ?>">
+                    <input type="hidden" name="produtos" value="<?php echo get_field('codigo_do_pacote'); ?>">
                     <input type="hidden" name="usuarioCad" value="0">
                     <input type="hidden" name="formaPag" value="B">
                     <input type="hidden" name="dataVencimento" value="05">
@@ -53,9 +53,50 @@
                         <label for="bairro">Bairro</label>
                         <input type="text" name="bairro" placeholder="Digite seu bairro"></span>
                     </div>
-                    <div class="field">
-                        <label for="municipio">Cidade</label>
-                        <input type="text" name="municipio" placeholder="Digite sua cidade"></span>
+                    <div class="field flex">
+                        <div class="field">
+                            <label for="estado">Estado</label>
+                            <div class="select">
+                                <select id="estado" name="estado">
+                                    <option value="" selected disabled>Escolha o estado</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="municipio">Cidade</label>
+                            <div class="select">
+                                <select name="municipio" id="cidade">
+                                    <option value="" selected hidden>Primeiro selecione o estado</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="field">
                         <label for="tel">Telefone</label>
@@ -77,6 +118,7 @@
                         <button class="ui-button">Enviar</button>
                     </div>
                 </form>
+                <div class="checkout-message"></div>
             </div>
         </div>
     </section>
