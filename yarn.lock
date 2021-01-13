@@ -4141,12 +4141,10 @@ jquery-mask-plugin@^1.14.15:
   resolved "https://registry.yarnpkg.com/jquery-mask-plugin/-/jquery-mask-plugin-1.14.15.tgz#9daabb41024383cba2a793bacfa46ef8f87273a5"
   integrity sha512-/mI1N5WG9E7JmjFWIQBIMuG/4QlZDAXuoNjHoqVWZSMah+go5hp/xKI/xC0Jud9Ly4HqqhFxY4AXLTUZT+J7Hg==
 
-jquery-validation@^1.16.0:
-  version "1.19.0"
-  resolved "https://registry.yarnpkg.com/jquery-validation/-/jquery-validation-1.19.0.tgz#0fedf0c0483a030c4fff072398898ac18cfd6e40"
-  integrity sha512-i1ygcs9K9eI0jqQ8fiOZdT0Ofw941YII1zyPQDUkBS8t2G8SoSWz8UUEVT6gV1KvsaBbovtL8YxjLALACR0syQ==
-  dependencies:
-    jquery "^1.7 || ^2.0 || ^3.1"
+jquery-validation@^1.19.3:
+  version "1.19.3"
+  resolved "https://registry.yarnpkg.com/jquery-validation/-/jquery-validation-1.19.3.tgz#50b350eba8b02bcfd119ba15f199487b7eb64086"
+  integrity sha512-iXxCS5W7STthSTMFX/NDZfWHBLbJ1behVK3eAgHXAV8/0vRa9M4tiqHvJMr39VGWHMGdlkhrtrkBuaL2UlE8yw==
 
 jquery.animate-number@^0.0.14:
   version "0.0.14"
@@ -4155,7 +4153,7 @@ jquery.animate-number@^0.0.14:
   dependencies:
     jquery ">= 1.7.0"
 
-"jquery@>= 1.7.0", jquery@>=1.8.3, "jquery@^1.7 || ^2.0 || ^3.1", jquery@^3.2.1:
+"jquery@>= 1.7.0", jquery@>=1.8.3, jquery@^3.2.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
   integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
