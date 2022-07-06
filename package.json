@@ -59,7 +59,7 @@
     "font-awesome": "4.7",
     "jquery": "^3.2.1",
     "jquery-mask-plugin": "^1.14.15",
-    "jquery-validation": "^1.16.0",
+    "jquery-validation": "^1.19.5",
     "jquery.animate-number": "^0.0.14",
     "normalize.css": "^4.2.0",
     "owl.carousel": "^2.3.2",
